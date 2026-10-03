@@ -1,0 +1,71 @@
+/* Custom App Styles */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 4s ease-in-out infinite;
+}
+
+/* PWA Standalone Mode & Safe Area Support */
+@media all and (display-mode: standalone) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Leaflet Map Customizations */
+.leaflet-container {
+  font-family: inherit;
+  border-radius: 0.75rem;
+}
+
+.custom-map-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #059669;
+  color: white;
+  border-radius: 9999px;
+  font-weight: 700;
+  border: 2px solid white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.custom-map-pin.borrow {
+  background-color: #2563eb;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Tab Active Indicator */
+.tab-active {
+  border-bottom: 2px solid #059669;
+  color: #059669;
+  font-weight: 600;
+}
